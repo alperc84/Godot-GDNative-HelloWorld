@@ -19,7 +19,7 @@ Note: Godot headers content is copied inside godot-cpp\godot_headers
 Compile godot_cpp
   * Go to godot_cpp > src
     * Execute the following command: ```scons generate_bindings="yes" p=linux```
-      * Note: generate_bindings="yes" is used so that it will generate all the necesarry hpp files. It should generate a .a file on bin folder			  
+      * Note: generate_bindings="yes" is used so that it will generate all the necesarry hpp files. It should generate a libgodot-cpp.xxx.xxx.a file on bin folder. This file will be used later when we are making a .so file			  
 		
 Go to project folder
 
