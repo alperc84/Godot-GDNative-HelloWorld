@@ -52,8 +52,8 @@ Note: Godot headers content is copied inside godot-cpp\godot-headers
   * load the GDNative file to a variable
 	```var my_class = load("res://HelloWorld.gdns").new();```
   * You should be able to use the method as
-	```my_class.greet();```
-	```my_class.greet("Name") # Returns a String```
+	* ```my_class.greet();```
+	* ```my_class.greet("Name") # Returns a String```
 		
 
 References:
