@@ -56,7 +56,7 @@ Load it via script
 	```var my_class = load("res://HelloWorld.gdns").new();```
   * You should be able to use the method as
 	* ```my_class.greet();```
-	* ```my_class.greet("Name") # Returns a String```
+	* ```my_class.greet_with_name("Name") # Returns a String```
 	
 I have included a built Godot Project with compiled gdnative included.
 
