@@ -13,7 +13,7 @@ You can clone godot_cpp and godot_headers here or use the one provided in this p
   * git clone https://github.com/GodotNativeTools/godot_headers
   * git clone https://github.com/GodotNativeTools/godot-cpp
 
-Note: Godot headers content is copied inside godot-cpp\godot-headers
+Note: Godot headers content is copied inside godot-cpp\godot_headers
 
 **STEPS**
 Compile godot_cpp
