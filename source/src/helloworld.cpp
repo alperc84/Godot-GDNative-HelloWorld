@@ -7,9 +7,11 @@ using namespace godot;
 
 // NOTE: Change the Class name
 class HelloWorld : public GodotScript<Reference> {
+	// Change this
 	GODOT_CLASS(HelloWorld);
 	
 public:
+	// Change the constructor name
 	HelloWorld() {}
 	
 	// Ex. 1: Prints Hello World
@@ -17,13 +19,15 @@ public:
 		return Godot::print("Hello World!");
 	}
 
-	// Ex. 2: Demonstrates argument and return. Returns a string
+	// Ex. 2: Demonstrates argument and return. Returns a Godot String
 	String greet2(String your_name){
 		return "Hello " + your_name;
 	}
 
 
-	// NOTE: Register your methods here.	
+	// NOTE: Register your methods here. 
+	// First argument is the name that you will use when calling the function inside Godot
+	// Second argument Format is &ClassName::Function
 	static void _register_methods(){
         register_method("greet", &HelloWorld::greet1);
 		register_method("greet_with_name", &HelloWorld::greet2);
@@ -48,6 +52,6 @@ extern "C" void GDN_EXPORT godot_gdnative_terminate(godot_gdnative_terminate_opt
 extern "C" void GDN_EXPORT godot_nativescript_init(void *handle)
 {
     Godot::nativescript_init(handle);
-	// NOTE: Change the Class name
+    // NOTE: Change the Class name
     register_class<HelloWorld>();
 }
