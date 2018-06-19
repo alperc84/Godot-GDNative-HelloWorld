@@ -25,14 +25,14 @@ Note: Godot headers content is copied inside godot-cpp\godot-headers
   * Execute:
   ```
   clang -fPIC -o src/(cpp-name).os -c src/(cpp-name).cpp -g -O3 -std=c++14 -I- ../godot-cpp/include -I../godot_headers
-  It should create (cpp-name).os on src folder
   ```
+  It should create (cpp-name).os on src folder
 
   * Execute:
   ```
   clang -o lib/(cpp-name).so -shared src/(cpp-name).os -L../godot-cpp/include -L$godot_cpp/bin -lgodot-cpp.linux.64
-  It should create (cpp-name).so on lib folder
   ```
+  It should create (cpp-name).so on lib folder
 
   * Note: You can also run the prebuild ./clang_me script inside the project folder (which does the same thing)
 
