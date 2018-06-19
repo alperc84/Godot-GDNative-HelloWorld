@@ -1,0 +1,19 @@
+#/bin/bash
+
+
+# Variables. Change this
+cpp_name="helloworld"
+godot_cpp="../godot-cpp"
+godot_header="../godot-cpp/godot_headers"
+
+
+# Generate a .os file on src folder
+clang -fPIC -std=c++14 -o src/$cpp_name.os -c src/$cpp_name.cpp -g -O3 -std=c++14 -I$godot_cpp/include -I$godot_header
+
+# Generate a .so file on lib folder
+clang -g -o lib/$cpp_name.so -shared src/$cpp_name.os -L$godot_cpp/include -L$godot_cpp/bin -lgodot-cpp.linux.64
+
+# Unset the variables that we used
+unset godot_cpp
+unset godot_headers
+unset cpp_name
