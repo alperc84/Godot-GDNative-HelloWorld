@@ -11,6 +11,7 @@ godot_header="../godot-cpp/godot_headers"
 clang -fPIC -std=c++14 -o src/$cpp_name.os -c src/$cpp_name.cpp -g -O3 -std=c++14 -I$godot_cpp/include -I$godot_header
 
 # Generate a .so file on lib folder
+# Note: -L$godot_cpp/bin -lgodot-cpp.linux.64 is the .a file that you have generated when compiling godot-cpp using scons
 clang -g -o lib/$cpp_name.so -shared src/$cpp_name.os -L$godot_cpp/include -L$godot_cpp/bin -lgodot-cpp.linux.64
 
 # Unset the variables that we used
