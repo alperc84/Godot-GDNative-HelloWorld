@@ -49,7 +49,7 @@ Make a GDNative Resource on Godot ( + Sign on inspector > Choose GDNative)
     * It will give you a list of Platforms. Choose the correct platform.
     * Point it to the .so file that you generated (inside Godot lib)
     * Save the GDNative Library as <name>.gdnlib
-    * Save the GDNative Resource as <name>.gdns
+    * Create a <name>.gdns file. (I am usually creating a temporary node, attaching a GDNative Script, and saving the script in order to generate a gdns file. Put the name of your Class under Class Name and load the gdnlib file that you create on GDNativeLibrary
 
 Load it via script
   * load the GDNative file to a variable
